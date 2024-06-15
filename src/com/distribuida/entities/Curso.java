@@ -18,7 +18,7 @@ public class Curso {
 	@Id 
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name="id_curso")
-	private int id_curso;
+	private int idCurso;
 	@Column(name="nombreCurso")
 	private String nombreCurso;
 	@Column(name="numCurso")
@@ -30,20 +30,20 @@ public class Curso {
 	
 	public Curso () {}
 
-	public Curso(int id_curso, String nombreCurso, String numCurso, String horas, String departamentos) {
-		this.id_curso = id_curso;
+	public Curso(int idCurso, String nombreCurso, String numCurso, String horas, String departamentos) {
+		this.idCurso = idCurso;
 		this.nombreCurso = nombreCurso;
 		this.numCurso = numCurso;
 		this.horas = horas;
 		this.departamentos = departamentos;
 	}
 
-	public int getId_curso() {
-		return id_curso;
+	public int getIdCurso() {
+		return idCurso;
 	}
 
-	public void setIdCurso(int id_curso) {
-		this.id_curso = id_curso;
+	public void setIdCurso(int idCurso) {
+		this.idCurso = idCurso;
 	}
 
 	public String getNombreCurso() {
@@ -80,7 +80,7 @@ public class Curso {
 
 	@Override
 	public String toString() {
-		return "Curso [id_curso=" + id_curso + ", nombreCurso=" + nombreCurso + ", numCurso=" + numCurso + ", horas="
+		return "Curso [idCurso=" + idCurso + ", nombreCurso=" + nombreCurso + ", numCurso=" + numCurso + ", horas="
 				+ horas + ", departamentos=" + departamentos + "]";
 	}
 
