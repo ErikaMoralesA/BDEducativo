@@ -15,7 +15,7 @@ public class PrincipalCurso {
 		// Patron de IoC o Inversión de Conrtol
 		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("ApplicationContext.xml");
 
-		CursoDAO cursoDAO = context.getBean("autorDAOImpl",CursoDAO.class);
+		CursoDAO cursoDAO = context.getBean("cursoDAOImpl",CursoDAO.class);
 		
 		List<Curso> curso = cursoDAO.findAll();
 		
