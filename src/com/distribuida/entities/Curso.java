@@ -12,7 +12,6 @@ import org.springframework.stereotype.Component;
 @Component
 @Entity
 @Table(name = "curso")
-
 public class Curso {
 	
 	@Id 
@@ -25,17 +24,17 @@ public class Curso {
 	private String numCurso;
 	@Column(name="horas")
 	private String horas;
-	@Column(name="departamentos")
-	private String departamentos;
+	@Column(name="departamento")
+	private String departamento;
 	
 	public Curso () {}
 
-	public Curso(int idCurso, String nombreCurso, String numCurso, String horas, String departamentos) {
+	public Curso(int idCurso, String nombreCurso, String numCurso, String horas, String departamento) {
 		this.idCurso = idCurso;
 		this.nombreCurso = nombreCurso;
 		this.numCurso = numCurso;
 		this.horas = horas;
-		this.departamentos = departamentos;
+		this.departamento = departamento;
 	}
 
 	public int getIdCurso() {
@@ -70,18 +69,18 @@ public class Curso {
 		this.horas = horas;
 	}
 
-	public String getDepartamentos() {
-		return departamentos;
+	public String getDepartamento() {
+		return departamento;
 	}
 
-	public void setDepartamentos(String departamentos) {
-		this.departamentos = departamentos;
+	public void setDepartamento(String departamento) {
+		this.departamento = departamento;
 	}
 
 	@Override
 	public String toString() {
 		return "Curso [idCurso=" + idCurso + ", nombreCurso=" + nombreCurso + ", numCurso=" + numCurso + ", horas="
-				+ horas + ", departamentos=" + departamentos + "]";
+				+ horas + ", departamento=" + departamento + "]";
 	}
 
 	
